@@ -29,6 +29,28 @@ body {
   font-size: 14px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 105px;
+  height: auto;
+  display: block;
+}
+
+.brand-text h1 {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.brand-text p {
+  color: #6b7280;
+  font-size: 13px;
+}
+
 .admin-btn,
 .nav-btn {
   border: none;
