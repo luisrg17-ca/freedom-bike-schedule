@@ -53,12 +53,11 @@ async function loadShifts(year, month) {
     `&order=shift_date.asc,start_time.asc`;
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        apikey: SUPABASE_KEY,
-        Authorization: `Bearer ${SUPABASE_KEY}`
-      }
-    });
+   const response = await fetch(url, {
+  headers: {
+    apikey: SUPABASE_KEY
+  }
+});
 
     if (!response.ok) {
       throw new Error(`Supabase error: ${response.status}`);
