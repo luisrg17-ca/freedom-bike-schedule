@@ -52,18 +52,29 @@ async function loadShifts(year, month) {
     `&shift_date=lte.${endDate}` +
     `&order=shift_date.asc,start_time.asc`;
 
+  console.log("Request URL:", url);
+
   try {
-   const response = await fetch(url, {
-  headers: {
-    apikey: SUPABASE_KEY
-  }
-});
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "apikey": SUPABASE_KEY,
+        "Content-Type": "application/json"
+      }
+    });
+
+    const responseText = await response.text();
+
+    console.log("Supabase status:", response.status);
+    console.log("Supabase response:", responseText);
 
     if (!response.ok) {
-      throw new Error(`Supabase error: ${response.status}`);
+      throw new Error(
+        `Supabase error ${response.status}: ${responseText}`
+      );
     }
 
-    return await response.json();
+    return JSON.parse(responseText);
   } catch (error) {
     console.error("Could not load shifts:", error);
     return [];
