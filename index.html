@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freedom Bike Schedule</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Freedom Bike Schedule</h1>
+      <p>Team Schedule</p>
+    </div>
+
+    <button id="adminBtn" class="admin-btn">Admin Login</button>
+  </header>
+
+  <main class="container">
+    <section class="calendar-card">
+      <div class="calendar-header">
+        <button id="prevMonth" class="nav-btn">←</button>
+        <h2 id="monthTitle">September 2026</h2>
+        <button id="nextMonth" class="nav-btn">→</button>
+      </div>
+
+      <div class="weekdays">
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+        <div>Sunday</div>
+      </div>
+
+      <div id="calendarGrid" class="calendar-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
