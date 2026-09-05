@@ -10,13 +10,14 @@
 
 <body>
   <header class="topbar">
-   <div class="brand">
-  <img src="FB.png" alt="Freedom Bikes" class="brand-logo">
-  <div class="brand-text">
-    <h1>Freedom Bike Schedule</h1>
-    <p>Team Schedule</p>
-  </div>
-</div>
+    <div class="brand">
+      <img src="FB.png" alt="Freedom Bikes" class="brand-logo">
+
+      <div class="brand-text">
+        <h1>Freedom Bike Schedule</h1>
+        <p>Team Schedule</p>
+      </div>
+    </div>
 
     <button id="adminBtn" class="admin-btn">Admin Login</button>
   </header>
@@ -42,6 +43,42 @@
       <div id="calendarGrid" class="calendar-grid"></div>
     </section>
   </main>
+
+  <!-- Admin Login Modal -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeLoginModal" class="modal-close">×</button>
+
+      <h2>Admin Login</h2>
+      <p class="modal-subtitle">
+        Sign in to manage the Freedom Bike schedule.
+      </p>
+
+      <form id="loginForm">
+        <label for="adminEmail">Email</label>
+        <input
+          type="email"
+          id="adminEmail"
+          value="admin@freedombike.local"
+          required
+        />
+
+        <label for="adminPassword">Password</label>
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Enter password"
+          required
+        />
+
+        <p id="loginError" class="login-error"></p>
+
+        <button type="submit" class="login-submit">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
